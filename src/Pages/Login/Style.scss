@@ -1,0 +1,205 @@
+@import "../../Assets/Sass/color.scss";
+@import "../../Assets/Sass/variable.scss";
+
+.login_left_side {
+    background-image: url('../../Assets/Images/login_bg.jpg');
+    background-repeat: $background_no_repeat;
+    background-size: $background_cover;
+    height: $height_100vh;
+}
+
+.login_main_container {
+    background-image: url('../../Assets/Images/login_form_right_bg.png');
+    background-repeat: $background_no_repeat;
+    background-position: 100% 100%;
+    background-size: contain;
+}
+
+.login_left_side img {
+    display: $display_block;
+    margin: 0 auto;
+    height: $height_100vh;
+    object-fit: scale-down;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+.login_left_side .carousel-indicators button {
+    width: 13px;
+    height: 0px;
+    cursor: $cursor_pointer;
+    border: 0;
+    border-top: 4px solid $white_color;
+    border-bottom: 10px solid $white_color;
+    border-radius: 50px;
+}
+
+.login_with_emialid_pw .ant-form-item-row {
+    display: $display_block;
+}
+
+.login_with_emialid_pw label {
+    font-size: $font_size16 !important;
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+.login_with_emialid_pw input {
+    height: 45px;
+    font-size: $font_size16 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.login_with_emialid_pw input::placeholder {
+    color: #a9a9a9;
+    font-size: $font_size16;
+}
+
+.login_with_emialid_pw .ant-input-suffix {
+    padding-right: 10px;
+}
+
+.login_with_emialid_pw .ant-input-affix-wrapper {
+    padding: 0;
+    border-radius: 0;
+    border: 1px solid $light_grey_color
+}
+
+.login_with_emialid_pw .ant-input-affix-wrapper:hover {
+    border: 1px solid $blue_color;
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.login_with_emialid_pw .ant-input-affix-wrapper:hover .ant-input-prefix {
+    border-right: 1px solid $blue_color;
+    transition: 0.5s
+}
+
+.login_with_emialid_pw .ant-input-prefix {
+    padding: 0 14px;
+    margin-right: 0px;
+    font-size: $font_size16;
+    color: #7f7f7f;
+    border-right: 1px solid $light_grey_color;
+}
+
+.login_with_emialid_pw button[type="submit"] {
+    background: linear-gradient(90deg, blue_color 0%, blue_color2 100%);
+    border: none;
+    height: 48px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: $font_size16;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.login_with_emialid_pw button[type="submit"]:hover {
+    background: linear-gradient(90deg, blue_color2 0%, blue_color2 100%);
+}
+
+.login_with_emialid_pw small {
+    color: $dark_grey_color;
+    font-weight: 300;
+}
+
+.auth_checkbox span {
+    font-size: 12px;
+    color: $dark_grey_color;
+}
+
+.login_with_emialid_pw .ant-form-item {
+    margin-bottom: 15px;
+}
+
+.grey_color {
+    color: $dark_grey_color;
+}
+
+.login_with_emialid_pw .ant-input-affix-wrapper .ant-form-item-feedback-icon {margin-top: 0px;}
+.login_with_emialid_pw .ant-input-affix-wrapper .ant-form-item-feedback-icon {margin-top: 0px;}
+.login_with_emialid_pw .ant-form-item-feedback-icon {margin-top: -5px;}
+
+.text_hover_animation {
+    --s: 0.1em;   /* the thickness of the line */
+    --c: #2e3ea0; /* the color */
+    
+    color: $color_black;
+    padding-bottom: var(--s);
+    cursor: pointer;
+    background: 
+      linear-gradient(90deg,var(--c) 50%,$color_black 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) $background_no_repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+  }
+  .text_hover_animation:hover  {--_p: 100%;}
+  .sign_in_otp{cursor: pointer;}
+  .sign_in_otp:hover{font-weight: 500;}
+
+/* Media query */
+@media screen and (max-width:767px) {
+    .login_main_container>.row {
+        height: $height_100vh !important;
+    }
+
+    .login_right_side img {
+        width: 160px;
+    }
+
+    .login_main_container>.row {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .login_left_side {
+        display: none;
+    }
+
+    .login_main_container {
+        background-size: $background_cover;
+    }
+
+    .login_right_side {
+        height: auto;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .login_right_side {
+        border: 1px solid #dbdbdb;
+        padding: 40px;
+        background: $white_color;
+        border-radius: 10px;
+    }
+
+    .login_main_container>.row {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .login_right_side {
+        width: 100%;
+        ;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .login_with_emialid_pw {
+        width: 450px;
+        margin: 0 auto;
+    }
+}
