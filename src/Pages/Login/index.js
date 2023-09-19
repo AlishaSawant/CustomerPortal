@@ -7,7 +7,7 @@ import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import {loginInt, loginFailed} from "./Action";
 
 import "./Style.scss"
-import { LOGO, LOGIN_SLIDER_ONE, LOGIN_SLIDER_TWO, LOGIN_INIT, LOGIN_SUCCESS, LOGIN_FAILED } from "./Constants";
+import { LOGO, BG_IMG} from "./Constants";
 
 const Login = () => {
 
@@ -33,33 +33,20 @@ const Login = () => {
 
 
   return (
-    <Spin spinning={loading}>
-      <div className="container-fluid login_main_container">
-        <div className="row justify-content-center align-items-center">
-          {/* Login left side image and carousal start */}
-          <div className="col-md-7 login_left_side">
-            {/* Carousal start */}
-            <Carousel>
-              <Carousel.Item interval={6000}>
-                <img src={LOGIN_SLIDER_ONE} />
-              </Carousel.Item>
-              <Carousel.Item interval={6000}>
-                <img src={LOGIN_SLIDER_TWO} />
-              </Carousel.Item>
-            </Carousel>
-            {/* Carousal end */}
-          </div>
-          {/* Login left side image and carousal end */}
-
+    // <Spin spinning={loading}>
+    <div className="login_bg_img">
+ 
+      <div className="login_main_container">
+        
           {/* Login form section start */}
-          <div className="col-md-5 login_right_side">
+          <div className="login_right_side">
             <div className="text-center pb-md-4">
-              <img src={LOGO} alt="Clix Logo" />
-              <h1 className="mb-0 fw-bold mt-3"> Welcome to Clix! </h1>
+              <img width={170} src={LOGO} alt="Clix Logo" />
+              <h2 className="mb-0 fw-bold mt-3"> Welcome to Clix! </h2>
               <p className="grey_color mb-2">Please Enter Your Login Credentials</p>
             </div>
 
-              <div>
+              <Spin spinning={loading}>
                 {/* Form start */}
                 <div className="login_with_emialid_pw">
                   <Form
@@ -73,43 +60,26 @@ const Login = () => {
                   >
                     <Form.Item
                       className="email_phn"
-                      label="Enter Registered Email ID"
+                      label="Enter Registered Mobile Number"
                       name="username"
                       rules={[
                         {
                           // type: "email",
                           required: true,
-                          message: "Please enter Email ID",
+                          message: "Please enter Mobile Number",
                         },
                       ]}
                       hasFeedback
                     >
                       <Input
-                        placeholder="Email ID"
+                      className="mt-1"
+                        placeholder="Mobile Number"
                         prefix={
                           <UserOutlined className="site-form-item-icon" />
                         }
                       />
                     </Form.Item>
-                    <Form.Item
-                      label="Password"
-                      name="password"
-                      rules={[
-                        {
-                          required: true,
-                          message: "Please enter your password!",
-                        },
-                      ]}
-                      hasFeedback
-                    >
-                      <Input.Password
-                        placeholder="********"
-                        prefix={
-                          <LockOutlined className="site-form-item-icon" />
-                        }
-                      />
-                    </Form.Item>
-
+              
                     <Form.Item name="remember" valuePropName="checked">
                       <Checkbox className="auth_checkbox">
                         I authorize Clix Capital to connect with me through
@@ -119,20 +89,21 @@ const Login = () => {
 
                     <Form.Item>
                       <Button type="primary" block htmlType="submit">
-                        Login
+                        Login With OTP
                       </Button>
                     </Form.Item>
                   </Form>
                   {/* Form end */}
                 </div>
-              </div>
+              </Spin>
             
 
           </div>
           {/* Login form section start */}
-        </div>
+      
       </div>
-    </Spin>
+    </div>
+    // </Spin>
   );
 };
 

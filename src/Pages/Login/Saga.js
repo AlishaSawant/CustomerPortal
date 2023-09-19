@@ -11,7 +11,7 @@ function* loginAuthentication(action) {
 
     password: '0lelplR', */
 
-  const reqUrl = `${environment.LOGIN}?email=${action.data.username}&password=${action.data.password}`;
+  const reqUrl = `${environment.LOGIN}?email=${action.data.username}&password=12345`;
   const response = yield fetch(reqUrl, {
     method: "POST",
   });
@@ -25,7 +25,6 @@ function* loginAuthentication(action) {
 
     if (responseData.code === "200") {
       // sessionStorage.setItem("Token", responseData.token);
-
       yield put(loginScucces("Login Successfully!!"));
     } else {
       yield put(loginFailed(responseData.message));
