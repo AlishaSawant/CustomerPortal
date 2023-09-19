@@ -158,6 +158,7 @@ const HomePage = () => {
         <Tab eventKey="payments" title="Payments">
           Payments
         </Tab>
+        
       </Tabs>
       </section>
       {/* <button onClick={logout}>Logout</button>  */}
