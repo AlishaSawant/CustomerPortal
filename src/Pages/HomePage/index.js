@@ -25,6 +25,7 @@ import PendingDocumentList from "../PendingDocumentList";
 
 import "./Styles.scss";
 
+
 const HomePage = () => {
   const navigate = useNavigate();
   const logout = () => {
@@ -48,21 +49,29 @@ const HomePage = () => {
   }
   const items = [
     getItem("Account Summary", "sub1", <MailOutlined />, [
-      getItem("Summary 1", "5"),
-      getItem("Summary 2", "6"),
-      getItem("Summary 3", "7"),
-      getItem("Summary 4", "8"),
+      getItem("Loan Application Details", "1", <PieChartOutlined />),
+      getItem("Pending Document List", "2", <DesktopOutlined />),
+      // getItem("Summary 3", "7"),
+      // getItem("Summary 4", "8"),
     ]),
-    getItem("Loan Application Details", "1", <PieChartOutlined />),
-    getItem("Pending Document List", "2", <DesktopOutlined />),
-    getItem("Option 3", "3", <ContainerOutlined />),
+    // getItem("Loan Application Details", "1", <PieChartOutlined />),
+    // getItem("Pending Document List", "2", <DesktopOutlined />),
+    getItem("Request", "1", <ContainerOutlined />,[
+      getItem("Loan Statement", "9"),
+      getItem("Loan Documents", "10"),
+      getItem("Payment Summary", "11"),
+      getItem("Service Resquest History", "12"),
+
+    ]),
     
-    getItem("Navigation Two", "sub2", <AppstoreOutlined />, [
-      getItem("Option 9", "9"),
-      getItem("Option 10", "10"),
+    getItem("Transact", "sub2", <AppstoreOutlined />, [
+      getItem("Online Payments", "13"),
+      getItem("E-Agrement", "14"),
+      getItem("Pre-EMI to EMI", "14"),
+      getItem("Request for Top UP", "16"),
       getItem("Submenu", "sub3", null, [
-        getItem("Option 11", "11"),
-        getItem("Option 12", "12"),
+        getItem("Option 11", "13"),
+        getItem("Option 12", "14"),
       ]),
     ]),
   ];
@@ -81,7 +90,8 @@ const HomePage = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-6 header_top_left_side">
-              CLIX CAPITAL SERVICES PRIVATE LIMITED
+              {/* CLIX CAPITAL SERVICES PRIVATE LIMITED */}
+              <img width={150} src={LOGO} alt="Clix Logo" />
             </div>
             <div className="col-md-6 text-md-end">
               <UserOutlined />{" "}
