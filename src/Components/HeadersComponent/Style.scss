@@ -15,3 +15,8 @@ small{font-size: 12px;}
 .top_header_bottom{
     border-bottom: 1px solid #dbdbdb;
 }
+
+
+@media screen and (max-width:767px){
+    .top_header_bottom{display: none;}
+}

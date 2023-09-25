@@ -60,6 +60,19 @@
     margin-top: 20px;
 }
 
+.hemburger_menu{display: none;}
+.ant-menu.ant-menu-vertical.ant-menu-inline-collapsed{display: none;}
+
+
+@media screen and (max-width:767px){
+    .hemburger_menu{
+        position: absolute;
+        display: block;
+        top: 46px;
+        right: 0;
+    }
+}
+
 @media (min-width: 768px){
 .menu_tabs .col-md-3 {
     flex: 0 0 auto;

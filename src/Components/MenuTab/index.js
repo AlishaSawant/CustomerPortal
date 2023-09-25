@@ -1,14 +1,18 @@
 import React, { useState} from "react";
 import { useNavigate } from "react-router-dom";
-import { Menu } from "antd";
+import { Layout, Menu, Button } from "antd";
 import {
     AppstoreOutlined,
     ContainerOutlined,
     DesktopOutlined,
     MailOutlined,
     PieChartOutlined,
+    MenuUnfoldOutlined,
+    MenuFoldOutlined
   } from "@ant-design/icons";
-  import "./Style.scss"
+  import "./Style.scss";
+
+ 
 
 const MenuTab = () => {
     const navigate = useNavigate();
@@ -70,6 +74,17 @@ const MenuTab = () => {
                 items={items}
                 onClick={handleMenuClick}
               />
+           <Button
+           className="hemburger_menu"
+            type="text"
+            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            onClick={() => setCollapsed(!collapsed)}
+            style={{
+              fontSize: '16px',
+              width: 39,
+              height: 39,
+            }}
+          />
         </>
     )
 }
