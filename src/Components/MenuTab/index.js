@@ -33,14 +33,12 @@ const MenuTab = () => {
       };
     }
     const items = [
-
       getItem("Personal Details" , "1", <UserOutlined />),
 
       getItem("Account Summary", "sub1", <MailOutlined />, [
         getItem("Loan Application Details", "2", <PieChartOutlined />),
       
       ]),
-   
       getItem("Request", "3", <ContainerOutlined />,[
         getItem("Log New Resquest", "4"),
         getItem("Exesting Request", "5"),
