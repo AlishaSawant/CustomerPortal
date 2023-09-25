@@ -8,6 +8,7 @@ import PendingDocumentList from "../PendingDocumentList";
 import HeaderComponent from "../../Components/HeadersComponent";
 import MenuTab from "../../Components/MenuTab";
 import LoanAccountsDetails from "../LoanAcountsDetails";
+import PersonalDetails from "../PersonalDetails";
 import "./Style.scss";
 
 
@@ -45,8 +46,8 @@ const Dashboard = () => {
                   <Routes>
                     <Route path="/" element={<LoanAccounts />} />
                     <Route
-                      path="/pendingdocumentlist"
-                      element={<PendingDocumentList />}
+                      path="/personaldetails"
+                      element={<PersonalDetails />}
                     />
                      <Route 
                       path="/loanaccountsdetails/:id" 

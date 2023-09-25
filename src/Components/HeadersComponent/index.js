@@ -53,13 +53,13 @@ const HeaderComponent = () => {
               {/* CLIX CAPITAL SERVICES PRIVATE LIMITED */}
               <img width={100} src={LOGO} alt="Clix Logo" />
             </Col>
+
             <Col className=" text-md-end pt-1 profile_icon">
               WELCOME TARUN DARDA
               <span className="logout_button">
                 <LogoutOutlined />
               </span>
             </Col>
-            
             {/* <div className="col-md-6 text-md-end pt-1 profile_icon">
               <UserOutlined />
               <span className="d-inline-block px-2 "><Dropdown
