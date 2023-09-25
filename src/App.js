@@ -3,9 +3,9 @@ import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import AdminLogin from "./Pages/Login";
-import HomePage from "./Pages/HomePage";
+import Login from "./Pages/Login";
 import AppAuthentication from "./Pages/AppAuthentication";
+import Dashboard from "./Pages/Dashboard";
 
 function App() {
  
@@ -22,16 +22,16 @@ function App() {
   return (
     <div>
         { true ? (
-          <HomePage />
+          <Dashboard />
         ) : (
           <Routes>
             <Route
               path="/"
-              element={<AppAuthentication Component={AdminLogin} />}
+              element={<AppAuthentication Component={Login} />}
             />
             <Route
               path="/login"
-              element={<AppAuthentication Component={AdminLogin} />}
+              element={<AppAuthentication Component={Login} />}
             />
             <Route path="/*" element={<Navigate to="/"/>} />
           </Routes>

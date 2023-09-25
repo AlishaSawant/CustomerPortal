@@ -36,7 +36,7 @@ const LoanAccountsDetails = () => {
   return (
     <>
       <div className="pt-3">
-        <h6>My Active Relations</h6>
+        <h6>My Active Loans</h6>
       </div>
 
       <div className="loans">No Loans</div>

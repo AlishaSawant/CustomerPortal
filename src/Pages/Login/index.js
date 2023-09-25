@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Carousel from "react-bootstrap/Carousel";
 import { Button, Checkbox, Form, Input, Spin, message } from "antd";
-import { UserOutlined, LockOutlined,PhoneOutlined } from "@ant-design/icons";
+import { UserOutlined, LockOutlined, PhoneOutlined } from "@ant-design/icons";
 
 import {loginInt, loginFailed} from "./Action";
 
