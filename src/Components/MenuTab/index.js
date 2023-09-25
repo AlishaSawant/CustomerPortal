@@ -5,6 +5,7 @@ import {
     AppstoreOutlined,
     ContainerOutlined,
     DesktopOutlined,
+    UserOutlined,
     MailOutlined,
     PieChartOutlined,
     MenuUnfoldOutlined,
@@ -32,28 +33,28 @@ const MenuTab = () => {
       };
     }
     const items = [
-      getItem("Account Summary", "sub1", <MailOutlined />, [
+
+      getItem("Personal Details" , "1", <UserOutlined />),
+
+      getItem("Account Summary", "2", <MailOutlined />, [
         getItem("Loan Application Details", "1", <PieChartOutlined />),
-        getItem("Pending Document List", "2", <DesktopOutlined />),
-        // getItem("Summary 3", "7"),
-        // getItem("Summary 4", "8"),
+      
       ]),
-      // getItem("Loan Application Details", "1", <PieChartOutlined />),
-      // getItem("Pending Document List", "2", <DesktopOutlined />),
+   
       getItem("Request", "3", <ContainerOutlined />,[
-        getItem("Loan Statement", "4"),
-        getItem("Loan Documents", "5"),
-        getItem("Payment Summary", "6"),
-        getItem("Service Resquest History", "7"),
+        getItem("Log New Resquest", "4"),
+        getItem("Exesting Request", "5"),
   
       ]),
+
+     
       
-      getItem("Transact", "sub2", <AppstoreOutlined />, [
-        getItem("Online Payments", "8"),
-        getItem("E-Agrement", "9"),
-        getItem("Pre-EMI to EMI", "10"),
-        getItem("Request for Top UP", "11"),
-      ]),
+      // getItem("Transact", "sub2", <AppstoreOutlined />, [
+      //   getItem("Online Payments", "8"),
+      //   getItem("E-Agrement", "9"),
+      //   getItem("Pre-EMI to EMI", "10"),
+      //   getItem("Request for Top UP", "11"),
+      // ]),
     ];
   
     const handleMenuClick = (item) => {

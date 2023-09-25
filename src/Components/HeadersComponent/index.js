@@ -4,11 +4,44 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { LOGO } from "./Constants";
+import { DownOutlined } from '@ant-design/icons';
+import { Divider, Dropdown, Space, Typography } from 'antd';
 import {
   UserOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
 import "./Style.scss"
+
+// const items = [
+//   {
+//     key: '1',
+//     label: 'Update Profile Details',
+//   },
+//   {
+//     key: '2',
+//     label: 'Switch to Dropline',
+//   },
+//   {
+//     key: '3',
+//     label: 'Frequently Added Questions',
+//   },
+//   {
+//     key: '4',
+//     label: 'Branch Locator',
+//   },
+//   {
+//     key: '5',
+//     label: 'Manage Your Mandates ',
+//   },
+//   {
+//     type: 'divider',
+//   },
+//   {
+//     key: '6',
+//     label: 'Change Password',
+//     icon: <LogoutOutlined />,
+//   },
+// ];
 
 const HeaderComponent = () => {
   return (
@@ -20,39 +53,38 @@ const HeaderComponent = () => {
               {/* CLIX CAPITAL SERVICES PRIVATE LIMITED */}
               <img width={100} src={LOGO} alt="Clix Logo" />
             </Col>
-            <Col xs={6} className="text-md-end pt-1">
-              <UserOutlined /> 
-              <span className="d-inline-block px-2">Jonhson Mitchell</span> 
-              <LogoutOutlined />
+            <Col className=" text-md-end pt-1 profile_icon">
+              WELCOME TARUN DARDA
+              <span className="logout_button">
+                <LogoutOutlined />
+              </span>
             </Col>
+            
+            {/* <div className="col-md-6 text-md-end pt-1 profile_icon">
+              <UserOutlined />
+              <span className="d-inline-block px-2 "><Dropdown
+                menu={{
+                  items,
+                  selectable: true,
+                  defaultSelectedKeys: ['3'],
+                }}
+              >
+                <Typography.Link>
+                  <Space className="profile_icon">
+                   WELCOME TARUN DARDA
+                  </Space>
+                </Typography.Link>
+              </Dropdown></span>
+              <span className="logout_button">
+                <LogoutOutlined />
+              </span>
+            </div> */}
+
           </Row>
         </Container>
       </section>
 
-      <section className="top_header_bottom">
-        <Container fluid>
-          <Row>
-            <div className="col-md-4">
-              <small className="d-inline-block pt-2">
-                Welcome JONSHON MITCHELL, your last visit was on 19 Sep 2022
-                4:03 PM
-              </small>
-            </div>
-            <div className="col-md-8 annoucement_sec">
-              <Marquee pauseOnHover={true} loop={0} delay={1}>
-                <p className="mb-0">
-                  We’ve crossed paths, so we should probably introduce
-                  ourselves! Here goes: We’re a smart, contemporary lending firm
-                  that uses technology to make loans simpler, faster, and more
-                  accessible for our customers. What does that mean? Minimum
-                  paperwork. Faster sanctions. Maximum peace of mind! Sounds too
-                  good to be true? Reach out to us and we’ll convince you!
-                </p>
-              </Marquee>
-            </div>
-          </Row>
-        </Container>
-      </section>
+      
     </>
   );
 };
