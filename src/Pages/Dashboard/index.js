@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Layout, message } from "antd";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col, Tab, Tabs } from "react-bootstrap";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LoanAccounts from "../LoanAccounts";
 import PendingDocumentList from "../PendingDocumentList";
 import HeaderComponent from "../../Components/HeadersComponent";
 import MenuTab from "../../Components/MenuTab";
+import LoanAccountsDetails from "../LoanAcountsDetails";
 import "./Style.scss";
 
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
-import LoanAccountsDetails from "../LoanAcountsDetails";
 
 const Dashboard = () => {
   const loginSuccessMessage = useSelector(
