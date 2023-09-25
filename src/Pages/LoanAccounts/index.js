@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from "react-router-dom";
+import Heading from "../../Components/Heading";
 import "./Styles.scss"
 
 
-const LoanAccountsDetails = () => {
+const LoanAccounts = () => {
+  const [urlData, setUrlData] = useState("0003109889")
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -36,13 +39,13 @@ const LoanAccountsDetails = () => {
   return (
     <>
       <div className="pt-3">
-        <h6>My Active Loans</h6>
+        <Heading name="Active Loans" />
       </div>
 
       <div className="loans">No Loans</div>
 
       <div className="pt-5">
-        <h6>Close / Matured Loans</h6>
+        <Heading name="Close / Matured Loans" /> 
       </div>
 
       <div className="loans_carousel">
@@ -75,7 +78,7 @@ const LoanAccountsDetails = () => {
                     <small>Loan Ending Date</small>
                     <small>08 Apr 2022</small>
                 </div>
-                <button>View Details</button>
+                <Link to={`/loanaccountsdetails/${urlData}`}>View Details</Link>
              </div>
           </div>
 
@@ -95,7 +98,7 @@ const LoanAccountsDetails = () => {
                     <small>Loan Ending Date</small>
                     <small>08 Apr 2022</small>
                 </div>
-                <button>View Details</button>
+                <Link>View Details</Link>
              </div>
           </div>
 
@@ -115,7 +118,7 @@ const LoanAccountsDetails = () => {
                     <small>Loan Ending Date</small>
                     <small>08 Apr 2022</small>
                 </div>
-                <button>View Details</button>
+                <Link>View Details</Link>
              </div>
           </div>
 
@@ -135,7 +138,7 @@ const LoanAccountsDetails = () => {
                     <small>Loan Ending Date</small>
                     <small>08 Apr 2022</small>
                 </div>
-                <button>View Details</button>
+                <Link>View Details</Link>
              </div>
           </div>
 
@@ -155,7 +158,7 @@ const LoanAccountsDetails = () => {
                     <small>Loan Ending Date</small>
                     <small>08 Apr 2022</small>
                 </div>
-                <button>View Details</button>
+                <Link>View Details</Link>
              </div>
           </div>
 
@@ -175,7 +178,7 @@ const LoanAccountsDetails = () => {
                     <small>Loan Ending Date</small>
                     <small>08 Apr 2022</small>
                 </div>
-                <button>View Details</button>
+                <Link>View Details</Link>
              </div>
           </div>
 
@@ -185,4 +188,4 @@ const LoanAccountsDetails = () => {
   );
 };
 
-export default LoanAccountsDetails;
+export default LoanAccounts;
