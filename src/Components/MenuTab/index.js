@@ -33,14 +33,10 @@ const MenuTab = () => {
       };
     }
     const items = [
-
       getItem("Personal Details" , "1", <UserOutlined />),
-
-      getItem("Account Summary", "2", <MailOutlined />, [
-        getItem("Loan Application Details", "1", <PieChartOutlined />),
-      
+      getItem("Account Summary",  "sub1", <MailOutlined />, [
+        getItem("Loan Application Details", "2", <PieChartOutlined />),
       ]),
-   
       getItem("Request", "3", <ContainerOutlined />,[
         getItem("Log New Resquest", "4"),
         getItem("Exesting Request", "5"),
@@ -58,17 +54,15 @@ const MenuTab = () => {
     ];
   
     const handleMenuClick = (item) => {
-      if (item.key === "1") {
+      if (item.key === "2") {
         navigate("/"); // Redirect to Home page
-      } else if (item.key === "2") {
-        navigate("/PendingDocumentList"); // Redirect to Home page
       }
     };
 
     return (
         <>
             <Menu
-                defaultSelectedKeys={["1"]}
+                defaultSelectedKeys={["2"]}
                 defaultOpenKeys={["sub1"]}
                 mode="inline"
                 inlineCollapsed={collapsed}
