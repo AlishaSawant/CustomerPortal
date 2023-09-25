@@ -2,7 +2,9 @@
  .menu_tabs .col-md-3 .ant-menu.ant-menu-root.ant-menu-inline {
     height: 100vh;
  }
-
+ .menu_tabs .col-md-9{
+   background-color: #fff;
+ }
  @media screen and (min-width:768px){
     .menu_tabs .col-md-9{padding:20px 40px;}
  }

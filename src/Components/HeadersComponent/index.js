@@ -53,7 +53,6 @@ const HeaderComponent = () => {
               {/* CLIX CAPITAL SERVICES PRIVATE LIMITED */}
               <img width={100} src={LOGO} alt="Clix Logo" />
             </Col>
-
             <Col className=" text-md-end pt-1 profile_icon">
               WELCOME TARUN DARDA
               <span className="logout_button">
