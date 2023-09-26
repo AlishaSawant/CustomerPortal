@@ -59,7 +59,9 @@ const MenuTab = () => {
       if (item.key === "1") {
         navigate("/personaldetails"); // Redirect to Home page
       } else if (item.key === "2") {
-        navigate("/LoanAccountsDetails"); // Redirect to Home page
+        navigate("/loanaccountsdetails"); // Redirect to Loan Account Page
+      } else if (item.key === "4") {
+        navigate("/lognewrequest"); // Redirect to New Request Page
       }
     };
 
@@ -88,4 +90,4 @@ const MenuTab = () => {
     )
 }
 
-export default MenuTab
+export default MenuTab ;
