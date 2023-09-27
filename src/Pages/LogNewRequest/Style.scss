@@ -4,8 +4,43 @@
     background-color: #fff;
 }
 
-.select .ant-col ant-col-14 ant-form-item-control css-dev-only-do-not-override-1vr7spz{
-    justify-content: center;
+.supportquries{
+    margin: 30px;
+}
+
+.col_quries{
+    border: 2px solid rgba(128, 128, 128, 0.63);
 }
 
 .query_form .ant-row{justify-content: center;}
+
+.submitCancelButton {
+    text-align: center;
+}
+.submit, .cancel{
+    background-color:rgb(227 15 139) ;
+    color: #fff;
+    border-radius: 15px;
+    width: 100px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+.specificQuery, .quickLink{
+    justify-content: center;
+    text-align: center;
+    background-color: azure;
+    font-size: medium;
+    font-weight: 700;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.links{
+    border: 2px solid rgba(128, 128, 128, 0.63);
+    height: 320px;
+}
+
+.links h6{
+    color: #5460d8;
+}

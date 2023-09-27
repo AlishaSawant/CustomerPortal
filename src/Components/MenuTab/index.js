@@ -41,7 +41,7 @@ const MenuTab = () => {
       ]),
       getItem("Request", "3", <ContainerOutlined />,[
         getItem("Log New Resquest", "4"),
-        getItem("Exesting Request", "5"),
+        getItem("Existing Request", "5"),
   
       ]),
 
@@ -62,6 +62,9 @@ const MenuTab = () => {
         navigate("/loanaccountsdetails"); // Redirect to Loan Account Page
       } else if (item.key === "4") {
         navigate("/lognewrequest"); // Redirect to New Request Page
+      }
+       else if (item.key === "5") {
+      navigate("/existingrequest"); // Redirect to New Request Page
       }
     };
 

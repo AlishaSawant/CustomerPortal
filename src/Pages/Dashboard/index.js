@@ -10,6 +10,7 @@ import MenuTab from "../../Components/MenuTab";
 import LoanAccountsDetails from "../LoanAcountsDetails";
 import PersonalDetails from "../PersonalDetails";
 import LogNewRequest from "../LogNewRequest";
+import ExistingRequest from "../ExestingRequest";
 import "./Style.scss";
 
 
@@ -55,7 +56,10 @@ const Dashboard = () => {
                       element={<LoanAccountsDetails />} />  
                      <Route 
                       path="/lognewrequest" 
-                      element={<LogNewRequest />} />  
+                      element={<LogNewRequest />} />
+                      <Route 
+                      path="/existingrequest" 
+                      element={<ExistingRequest />} />  
                     <Route 
                       path="/*" 
                       element={<Navigate to="/" />} />
