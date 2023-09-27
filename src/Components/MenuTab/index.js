@@ -41,7 +41,7 @@ const MenuTab = () => {
       ]),
       getItem("Request", "3", <ContainerOutlined />,[
         getItem("Log New Resquest", "4"),
-        getItem("Exesting Request", "5"),
+        getItem("Existing Request", "5"),
   
       ]),
 
@@ -59,7 +59,12 @@ const MenuTab = () => {
       if (item.key === "1") {
         navigate("/personaldetails"); // Redirect to Home page
       } else if (item.key === "2") {
-        navigate("/LoanAccountsDetails"); // Redirect to Home page
+        navigate("/loanaccountsdetails"); // Redirect to Loan Account Page
+      } else if (item.key === "4") {
+        navigate("/lognewrequest"); // Redirect to New Request Page
+      }
+       else if (item.key === "5") {
+      navigate("/existingrequest"); // Redirect to New Request Page
       }
     };
 
@@ -88,4 +93,4 @@ const MenuTab = () => {
     )
 }
 
-export default MenuTab
+export default MenuTab ;
