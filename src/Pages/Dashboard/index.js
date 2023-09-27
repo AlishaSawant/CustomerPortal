@@ -43,6 +43,7 @@ const Dashboard = () => {
                 </Col>
 
                 <Col md={9}>
+                  <div>
                   <Routes>
                     <Route path="/" element={<LoanAccounts />} />
                     <Route
@@ -56,6 +57,7 @@ const Dashboard = () => {
                       path="/*" 
                       element={<Navigate to="/" />} />
                   </Routes>
+                  </div>
                 </Col>
               </Row>
             </Container>
