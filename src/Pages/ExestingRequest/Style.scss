@@ -1,0 +1,40 @@
+
+.exestingResquest{
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+
+.title_requeststatus{
+    padding: 30px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.srResquestTable{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.srResquestTable th {
+ background-color: azure !important;
+ color: #5460d8 !important;
+ font-size: 15px !important;
+ font-weight: 600 !important;
+}
+
+.srResquestTable td{
+    color: gray;
+    font-weight: 400;
+    padding: 10px !important;
+}
+
+.srResquestTable .ant-table-cell{
+    border:1px solid rgba(225, 225, 225, 0.267)!important;
+}
+.srResquestTable .ant-pagination-item{
+   background-color: #5460d8 !important;
+   border-radius: 12px !important;
+   color: #fff !important;
+}
