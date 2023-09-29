@@ -18,27 +18,24 @@ const LoanAccountsDetails = () => {
     };
     const items = [
         {
-            label: '1st menu item',
+            label: 'H401VPL0224025',
             key: '134234543523',
-            icon: <UserOutlined />,
         },
         {
-            label: '2nd menu item',
+            label: 'H401VPL0224025',
             key: '223423',
-            icon: <UserOutlined />,
+
         },
         {
-            label: '3rd menu item',
+            label: 'H401VPL0224025',
             key: '355656',
-            icon: <UserOutlined />,
-            danger: true,
+            //danger: true,
         },
         {
-            label: '4rd menu item',
+            label: 'H401VPL0224025',
             key: '423434',
-            icon: <UserOutlined />,
-            danger: true,
-            disabled: true,
+            // danger: true,
+            // disabled: true,
         },
     ];
     const menuProps = {

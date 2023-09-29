@@ -71,9 +71,9 @@ const Dashboard = () => {
             </Container>
           </Tab>
 
-          <Tab eventKey="payments" title="Payments">
+          {/* <Tab eventKey="payments" title="Payments">
             Payments
-          </Tab>
+          </Tab> */}
         </Tabs>
       </section>
 
