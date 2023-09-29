@@ -47,118 +47,120 @@ const LoanAccountsDetails = () => {
 
     return (
         <>
-            <Row className="closedPersonalLoan">
-                <Col md={6} >
-                    <Heading name="My Closed Loans | Variable Personal Loans" />
-                </Col>
-                <Col md={6} className="text-end">
-                    <Dropdown menu={menuProps}>
-                        <Button className="selectLoanAccountButton">
-                            Select Loan Account
-                            <DownOutlined />
-                        </Button>
-                    </Dropdown>
-                </Col>
-            </Row>
-            <section className="myClosedLoans" >
-                <Row className="loandetails">
-                    <Col md={3}>
-                        <div className="loanAmount">Loan Amount</div>
-                        <h6 className="loanAmountSection">Rs. 6,94,000.00</h6>
+            <Col md={12} style={{ padding: "5px" }}>
+                <Row className="closedPersonalLoan">
+                    <Col md={8}>
+                        <Heading  name="My Closed Loans | Variable Personal Loans" / >
                     </Col>
-                    <Col md={3}>
-                        <div className="tenor">Tenor</div>
-                        <h6 className="tenorSection">30 Months</h6>
-                    </Col>
-                    <Col md={3}>
-                        <div className="emiAmount">EMI Amount</div>
-                        <h6 className="emiAmountSection">Rs. 0</h6>
-                    </Col>
-                    <Col md={3}>
-                        <div className="rateOfIntrest">Rate of Intrest</div>
-                        <h6 className="rateOfIntrestSection">7.90 %</h6>
+                    <Col md={4} className="text-end">
+                        <Dropdown menu={menuProps}>
+                            <Button className="selectLoanAccountButton">
+                                Select Loan Account
+                                <DownOutlined />
+                            </Button>
+                        </Dropdown>
                     </Col>
                 </Row>
+                <section className="myClosedLoans" >
+                    <Row className="loandetails">
+                        <Col md={3}>
+                            <div className="loanAmount">Loan Amount</div>
+                            <h6 className="loanAmountSection">Rs. 6,94,000.00</h6>
+                        </Col>
+                        <Col md={3}>
+                            <div className="tenor">Tenor</div>
+                            <h6 className="tenorSection">30 Months</h6>
+                        </Col>
+                        <Col md={3}>
+                            <div className="emiAmount">EMI Amount</div>
+                            <h6 className="emiAmountSection">Rs. 0</h6>
+                        </Col>
+                        <Col md={3}>
+                            <div className="rateOfIntrest">Rate of Intrest</div>
+                            <h6 className="rateOfIntrestSection">7.90 %</h6>
+                        </Col>
+                    </Row>
 
-                <Row className="allDetails">
-                    <Col md={4} className="currentLoanDetails" >
-                        <h6>Current Loan Details</h6>
-                        <p className="lan">Loan Account Number : H401VPL0224025</p>
-                        <hr></hr>
+                    <Row className="allDetails">
+                        <Col md={4} className="currentLoanDetails" >
+                            <h6>Current Loan Details</h6>
+                            <p className="lan">Loan Account Number : H401VPL0224025</p>
+                            <hr></hr>
 
-                        <div className="d-flex justify-content-between">
-                            <p>Total Amount Sanctioned : </p>
-                            <p className="landetails">6,94,000.00</p>
-                        </div>
+                            <div className="d-flex justify-content-between">
+                                <p>Total Amount Sanctioned : </p>
+                                <p className="landetails">6,94,000.00</p>
+                            </div>
 
-                        <div className="d-flex justify-content-between">
-                            <p>Rate of Intrest :</p>
-                            <p className="landetails"> 7.90%</p>
-                        </div>
+                            <div className="d-flex justify-content-between">
+                                <p>Rate of Intrest :</p>
+                                <p className="landetails"> 7.90%</p>
+                            </div>
 
-                        <div className="d-flex justify-content-between">
-                            <p>Loan Tenor : </p>
-                            <p className="landetails">30 Months</p>
-                        </div>
+                            <div className="d-flex justify-content-between">
+                                <p>Loan Tenor : </p>
+                                <p className="landetails">30 Months</p>
+                            </div>
 
-                        <div className="d-flex justify-content-between">
-                            <p>EMI Amount : </p>
-                            <p className="landetails">0</p>
-                        </div>
+                            <div className="d-flex justify-content-between">
+                                <p>EMI Amount : </p>
+                                <p className="landetails">0</p>
+                            </div>
 
-                        <div className="d-flex justify-content-between">
-                            <p>Intrest Outstanding : </p>
-                            <p className="landetails">0</p>
-                        </div>
+                            <div className="d-flex justify-content-between">
+                                <p>Intrest Outstanding : </p>
+                                <p className="landetails">0</p>
+                            </div>
 
-                        <div className="d-flex justify-content-between">
-                            <p>Total Amount Repaid :</p>
-                            <p className="landetails"> 8,22,234.00</p>
-                        </div>
-                        <hr></hr>
-                        <p className="viewMoreDetails">View More Details</p>
-                    </Col>
-
-                    <Col md={1}>
-                    </Col>
-
-                    <Col md={7}>
-                        <Col md={12} className="details">
-                            <div className= "d-flex justify-content-between">
-                            <h6 className="repaymentStatus">Repayment Status</h6>
-                            <span className="nextEmiDate">Next EMI Due On 5 May 2022</span>
+                            <div className="d-flex justify-content-between">
+                                <p>Total Amount Repaid :</p>
+                                <p className="landetails"> 8,22,234.00</p>
                             </div>
                             <hr></hr>
-                            <div className="d-flex">
-                                <div>
-                                    <span>Repaid Loan Amount: </span>
-                                    <span className="detailsection">  Rs. 8,22,234.00</span>
+                            <p className="viewMoreDetails">View More Details</p>
+                        </Col>
+
+                        <Col md={1}>
+                        </Col>
+
+                        <Col md={7}>
+                            <Col md={12} className="details">
+                                <div className="d-flex justify-content-between">
+                                    <h6 className="repaymentStatus">Repayment Status</h6>
+                                    <span className="nextEmiDate">Next EMI Due On 5 May 2022</span>
                                 </div>
-                            </div>
-                        </Col>
-                        <Col md={12} className="details">
-                            <h6 className="disbAmount">Disbursement Details</h6>
-                            <div className="d-flex justify-content-between">
-                                <p>Rate of Intrest:</p>
-                                <p className="detailsection"> 7.90%</p>
-                                <span>Last Disbursement Date:</span>
-                                <p className="detailsection"> 31 Oct 2029 </p>
-                                <span className="viewMoreDetails">View More Details</span>
-                            </div>
-                        </Col>
-                        <Col md={12} className="details">
-                            <h6 className="feeDeatils">Fee Details</h6>
-                            <div className="d-flex justify-content-between">
-                                <div>
-                                    <span>Total Fee Paid: </span>
-                                    <span className="detailsection">Rs.0</span>
+                                <hr></hr>
+                                <div className="d-flex">
+                                    <div>
+                                        <span>Repaid Loan Amount: </span>
+                                        <span className="detailsection">  Rs. 8,22,234.00</span>
+                                    </div>
                                 </div>
-                                <span className="viewMoreDetails">View More Details</span>
-                            </div>
+                            </Col>
+                            <Col md={12} className="details">
+                                <h6 className="disbAmount">Disbursement Details</h6>
+                                <div className="d-flex justify-content-between">
+                                    <p>Rate of Intrest:</p>
+                                    <p className="detailsection"> 7.90%</p>
+                                    <span>Last Disbursement Date:</span>
+                                    <p className="detailsection"> 31 Oct 2029 </p>
+                                    <span className="viewMoreDetails">View More Details</span>
+                                </div>
+                            </Col>
+                            <Col md={12} className="details">
+                                <h6 className="feeDeatils">Fee Details</h6>
+                                <div className="d-flex justify-content-between">
+                                    <div>
+                                        <span>Total Fee Paid: </span>
+                                        <span className="detailsection">Rs.0</span>
+                                    </div>
+                                    <span className="viewMoreDetails">View More Details</span>
+                                </div>
+                            </Col>
                         </Col>
-                    </Col>
-                </Row>
-            </section>
+                    </Row>
+                </section>
+            </Col>
         </>
     )
 }

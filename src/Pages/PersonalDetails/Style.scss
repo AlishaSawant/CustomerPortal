@@ -1,82 +1,95 @@
-.profile_image{
+.profile_image {
     width: 100px;
     height: 100px;
-    margin-left: 10px;
+    margin-left: 150px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.personal_details_column{
-    border: 1px solid #d1d1d1;
+.headings {
+    background-color: #5460d8;
+    color: #fff;
+    padding: 10px;
+    // margin-left: 20px;
+    // margin-right: 20px;
+}
+
+.personal_details_column {
+    // border: 1px solid #d1d1d1;
     box-shadow: 0px 2px 15px #00000017;
     background-color: #fff;
     border-radius: 5px;
     margin-top: 10px;
-    margin-left: 20px;
+    // margin-left: 20px;
 }
 
-.user_info{
+.user_info {
     margin-left: 10px;
 }
 
-.personal_details{
+.personal_details {
     // margin-bottom: 10px;
     // margin-left: 10px;
     padding: 5px;
 }
 
-.loan_details_info{
+.loan_details_info {
     padding: 5px;
 }
 
-.data{
+.data {
     margin-left: 10px;
     font-size: 15px;
 }
 
-.loan_details_column{
-    border: 1px solid #d1d1d1;
+.loan_details_column {
+    // border: 1px solid #d1d1d1;
     box-shadow: 0px 2px 15px #00000017;
     background-color: #fff;
     border-radius: 5px;
     margin-top: 10px;
-    margin-left: 20px;
     height: 300px;
 }
 
-.header{
+.header {
     font-size: 15px;
     font-weight: 600;
     padding: 5px;
 }
 
-.loan_details_info{
- padding: 5px;
+.loan_details_info {
+    padding: 5px;
 }
 
-.loan_details{
+.loan_details {
     margin: 10px;
 }
 
-.loan_header{
+.loan_header {
     font-size: 15px;
     font-weight: 600;
 }
 
-.loan_data{
+.loan_data {
     margin-left: 10px;
-    
+
 }
 
-.personal_details_icon{
+.personal_details_icon {
     width: 20px;
     height: 20px;
 }
-.pan{
+
+.pan {
     margin-bottom: 20px;
 }
-.phn_icon{transform: rotate(100deg);
+
+.phn_icon {
+    transform: rotate(100deg);
 }
-.user_info, .loan_details{
+
+.user_info,
+.loan_details {
     color: #5460d8;
+    text-align: center;
 }

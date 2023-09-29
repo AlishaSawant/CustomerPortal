@@ -1,29 +1,30 @@
 @import "../../Assets/Sass/color.scss";
 @import "../../Assets/Sass/variable.scss";
 
-.closedPersonalLoan{
+.closedPersonalLoan {
     margin-bottom: 10px;
 }
 
-.myClosedLoans{
+.myClosedLoans {
     background-color: #fff;
     padding: 25px;
 }
-.loandetails{
+
+.loandetails {
     background-color: azure;
     padding: 5px;
     margin-bottom: 20px;
 
 }
 
-.details{
+.details {
     margin-bottom: 20px;
     border: 1px solid #a9e6e6;
     padding: 10px;
     margin-left: 11px;
 }
 
-.currentLoanDetails{
+.currentLoanDetails {
     border: 1px solid #a9e6e6;
 }
 
@@ -33,45 +34,53 @@
     margin-top: 10px;
 }
 
-.repaymentStatus, .disbAmount, .feeDeatils{
+.repaymentStatus,
+.disbAmount,
+.feeDeatils {
     font-weight: 700;
 }
 
-.lan{
+.lan {
     text-align: center;
     font-weight: 500;
 }
 
-.landetails{
- font-weight: 700;
+.landetails {
+    font-weight: 700;
 }
 
-.selectLoanAccountButton{
-    background-color:#5460d8;
+.selectLoanAccountButton {
+    background-color: #5460d8;
     color: #fff;
 }
 
-.loanAmount, .tenor ,.emiAmount ,.rateOfIntrest{
-    color: #5460d8 ;
+.loanAmount,
+.tenor,
+.emiAmount,
+.rateOfIntrest {
+    color: #5460d8;
     font-weight: 600;
 }
 
-.loanAmountSection ,.tenorSection , .emiAmountSection ,.rateOfIntrestSection{
+.loanAmountSection,
+.tenorSection,
+.emiAmountSection,
+.rateOfIntrestSection {
     font-weight: 700;
 }
 
-.detailsection{
+.detailsection {
     font-weight: 700;
 }
 
-.nextEmiDate{
+.nextEmiDate {
     font-size: small;
     color: rgba(128, 128, 128, 0.781);
 }
 
-.viewMoreDetails{
-text-align: center;
-color: blue;
-font-size: smaller;
-text-decoration: underline;
+.viewMoreDetails {
+    text-align: center;
+    color: blue;
+    font-size: smaller;
+    text-decoration: underline;
 }

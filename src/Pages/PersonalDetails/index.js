@@ -10,8 +10,8 @@ import {
     PhoneOutlined,
     CalendarOutlined,
     ProfileOutlined,
-  } from "@ant-design/icons";
-  import "./Style.scss"
+} from "@ant-design/icons";
+import "./Style.scss"
 
 import {
     FIRST_NAME,
@@ -26,10 +26,11 @@ import {
 
 const PersonalDetails = () => {
     return (
-        <Row className="personalDetailsContainer">
-            <Heading name="Personal Details" />
-            <Row>
-                <Col md={4} className="personal_details_column">
+        <Col md={12} style={{ padding: "20px" }}>
+            <Row className="personalDetailsContainer">
+                <Heading name="Personal Details" />
+
+                <Col md={5} className="personal_details_column">
                     <div>
                         <img className="profile_image" src={PROFILE_PICTURE} alt="Registered Name" />
                     </div>
@@ -83,6 +84,7 @@ const PersonalDetails = () => {
 
                     </div>
                 </Col>
+                <Col md={1}></Col>
                 <Col md={6} className="loan_details_column">
                     <h5 className="loan_details">Loan Details</h5>
                     <hr></hr>
@@ -111,9 +113,10 @@ const PersonalDetails = () => {
                         <span className="loan_data">30.09,2023   </span>
                     </div>
                 </Col>
-            </Row>
 
-        </Row>
+
+            </Row>
+        </Col>
 
     )
 }

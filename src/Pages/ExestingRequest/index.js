@@ -56,15 +56,17 @@ const ExistingRequest = () => {
     ];
     return (
 
-        <Row>
-            <Heading name="Raised Request Status" />
-            <section className="exestingResquest">
-                <Row className="title_requeststatus">Click on SR number to check latest updates of service resquest</Row>
-                <div className="srResquestTable" >
-                    <Table className="srtable" columns={columns} dataSource={data} size="middle" />
-                </div>
-            </section>
-        </Row>
+        <Col md={12} style={{ padding: "20px 20px" }}>
+            <Row>
+                <Heading name="Raised Request Status" />
+                <section className="exestingResquest">
+                    <Row className="title_requeststatus">Click on SR number to check latest updates of service resquest</Row>
+                    <div className="srResquestTable" >
+                        <Table className="srtable" columns={columns} dataSource={data} size="middle" />
+                    </div>
+                </section>
+            </Row>
+        </Col>
     )
 }
 
