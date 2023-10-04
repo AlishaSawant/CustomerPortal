@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import { useNavigate } from "react-router-dom";
+import { LOGO } from "../HeadersComponent/Constants";
 import { Layout, Menu, Button } from "antd";
 import {
     AppstoreOutlined,
@@ -13,9 +14,9 @@ import {
   } from "@ant-design/icons";
   import "./Style.scss";
 
- 
+  const { Sider } = Layout;
 
-const MenuTab = () => {
+const SideBar = ({siderCollapseVal}) => {
     const navigate = useNavigate();
 
     const [collapsed, setCollapsed] = useState(false);
@@ -44,15 +45,7 @@ const MenuTab = () => {
         getItem("Existing Request", "5"),
   
       ]),
-
-     
-      
-      // getItem("Transact", "sub2", <AppstoreOutlined />, [
-      //   getItem("Online Payments", "8"),
-      //   getItem("E-Agrement", "9"),
-      //   getItem("Pre-EMI to EMI", "10"),
-      //   getItem("Request for Top UP", "11"),
-      // ]),
+ 
     ];
   
     const handleMenuClick = (item) => {
@@ -70,27 +63,52 @@ const MenuTab = () => {
 
     return (
         <>
-            <Menu
-                defaultSelectedKeys={["2"]}
-                defaultOpenKeys={["sub1"]}
-                mode="inline"
-                inlineCollapsed={collapsed}
-                items={items}
-                onClick={handleMenuClick}
-              />
-           <Button
-           className="hemburger_menu"
-            type="text"
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-            onClick={() => setCollapsed(!collapsed)}
-            style={{
-              fontSize: '16px',
-              width: 39,
-              height: 39,
-            }}
+<Sider
+      width={270}
+      style={{
+        overflowX: "hidden",
+        overflowY: "visible",
+        // height: "100vh",
+        // position: "fixed",
+        left: 0,
+        top: 0,
+        bottom: 0,
+      }}
+      trigger={null}
+      collapsible
+      collapsed={siderCollapseVal}
+    >
+      <div
+        className="demo-logo-vertical"
+        style={{
+          width: siderCollapseVal ? 0 : 290,
+          justifyContent: "flex-start",
+          background: "#fff"
+        }}
+      >
+        {siderCollapseVal ? (
+          <div className="collapsed_mobile_logo">CLIX</div>
+        ) : (
+          <img
+            className="sidebar_logo"
+            src={LOGO}
+            alt="Company Logo"
           />
+        )}
+         
+      </div>
+      <Menu
+        className="siderbar_menu"
+        defaultSelectedKeys={["2"]}
+        defaultOpenKeys={["sub1"]}
+        mode="inline"
+        items={items}
+        onClick={handleMenuClick}
+      />
+    </Sider>
+ 
         </>
     )
 }
 
-export default MenuTab ;
+export default SideBar ;

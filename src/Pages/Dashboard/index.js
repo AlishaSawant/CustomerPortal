@@ -6,15 +6,20 @@ import { useSelector } from "react-redux";
 import LoanAccounts from "../LoanAccounts";
 import PendingDocumentList from "../PendingDocumentList";
 import HeaderComponent from "../../Components/HeadersComponent";
-import MenuTab from "../../Components/MenuTab";
+import SideBar from "../../Components/SideBar";
 import LoanAccountsDetails from "../LoanAcountsDetails";
 import PersonalDetails from "../PersonalDetails";
 import LogNewRequest from "../LogNewRequest";
 import ExistingRequest from "../ExestingRequest";
 import "./Style.scss";
 
-
 const Dashboard = () => {
+  const [collapsed, setCollapsed] = useState(false);
+
+  const collapseData = (data) => {
+    setCollapsed(data);
+  };
+
   const loginSuccessMessage = useSelector(
     (state) => state.loginReducer.userLoginSuccessMessage
   );
@@ -26,58 +31,43 @@ const Dashboard = () => {
   }, [loginSuccessMessage]);
 
   return (
-    <Layout>
-      {/* Header Section Start */}
-      <HeaderComponent />
-      {/* Header Section End */}
+    <> 
+  
+    <Layout hasSider className="dashboard_container">
 
-      <section className="menu_tabs">
-        <Tabs
-          defaultActiveKey="My Relations"
-          transition={false}
-          id="noanim-tab-example"
-        >
-          <Tab eventKey="My Relations" title="My Relations">
-            <Container fluid className="container-fluid ps-0">
-              <Row>
-                <Col md={3}>
-                  <MenuTab />
-                </Col>
+      {/* Sidebar Start */}
+      <SideBar siderCollapseVal={collapsed} />
+      {/* Sidebar End */}
 
-                <Col md={9}>
-                  <div>
-                  <Routes>
-                    <Route path="/" element={<LoanAccounts />} />
-                    <Route
-                      path="/personaldetails"
-                      element={<PersonalDetails />}
-                    />
-                     <Route 
-                      path="/loanaccountsdetails/:id" 
-                      element={<LoanAccountsDetails />} />  
-                     <Route 
-                      path="/lognewrequest" 
-                      element={<LogNewRequest />} />
-                      <Route 
-                      path="/existingrequest" 
-                      element={<ExistingRequest />} />  
-                    <Route 
-                      path="/*" 
-                      element={<Navigate to="/" />} />
-                  </Routes>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </Tab>
+      <Layout
+        className="site-layout"
+        style={{
+          // marginLeft: collapsed ? 80 : 290,
+          transition: "all 0.2s,background 0s",
+        }}
+      >
+         <HeaderComponent 
+            sendCollapsedVal={collapseData}
+            collapseValue={collapsed}
+         />
 
-          {/* <Tab eventKey="payments" title="Payments">
-            Payments
-          </Tab> */}
-        </Tabs>
-      </section>
-
+        {/* All Pages Calling here start */}
+        <Routes>
+          <Route path="/" element={<LoanAccounts />} />
+          <Route path="/personaldetails" element={<PersonalDetails />} />
+          <Route
+            path="/loanaccountsdetails/:id"
+            element={<LoanAccountsDetails />}
+          />
+          <Route path="/lognewrequest" element={<LogNewRequest />} />
+          <Route path="/existingrequest" element={<ExistingRequest />} />
+          <Route path="/*" element={<Navigate to="/" />} />
+        </Routes>
+        {/* All Pages Calling here end */}
+        
+      </Layout>
     </Layout>
+    </>
   );
 };
 

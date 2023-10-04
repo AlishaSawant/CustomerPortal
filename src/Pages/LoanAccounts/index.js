@@ -1,12 +1,15 @@
 import React, {useState} from "react";
 import Carousel from "react-multi-carousel";
+import { Layout} from "antd";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
 import Heading from "../../Components/Heading";
+import Breadcrumb from "../../Components/Breadcumb"
 import "./Styles.scss"
 
-
-const LoanAccounts = () => {
+const { Content } = Layout;
+const LoanAccounts = (props) => {
+  console.log(props, "ppppppppppp")
   const [urlData, setUrlData] = useState("0003109889")
   const responsive = {
     superLargeDesktop: {
@@ -38,12 +41,13 @@ const LoanAccounts = () => {
 
   return (
     <>
+    <Breadcrumb parentMenu="Account Summary" pageTitle="Loan Details"/>
       <div className="pt-3">
         <Heading name="Active Loans" />
       </div>
 
       {/* <div className="loans">No Loans</div> */}
-
+      <Content className="dashboard_sec">
       <div className="loans_carousel">
         <Carousel
           className="container carousel"
@@ -322,6 +326,8 @@ const LoanAccounts = () => {
 
         </Carousel>
       </div>
+
+      </Content>
     </>
   );
 };
